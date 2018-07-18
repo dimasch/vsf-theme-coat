@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" style="height: 500px;">
     <add-to-cart :product="product" />
     <button class="btn btn-blue">
       Button
