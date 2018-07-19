@@ -1,5 +1,7 @@
-# vsf-theme-coat
+# The Coat Theme for [Vue Storefront](https://github.com/DivanteLtd/vue-storefront). 
+Extending atomic concept with Utility-First Tailwindcss and styleguide out of the box
 
+## Configuration
 Need pass `require('tailwindcss')(themeRoot + '/tailwind.js'),` to `./core/build/webpack.base.config.js`
 
 ```
