@@ -1,7 +1,7 @@
 <template>
-  <div class="breadcrumbs h5 cl-gray bread">
+  <div class="breadcrumbs">
     <span v-for="link in routes" :key="link.route_link">
-      <router-link :to="localizedRoute(link.route_link)">
+      <router-link :to="localizedRoute(link.route_link)" class="link">
         {{ link.name | htmlDecode }}
       </router-link> /
     </span>
@@ -23,8 +23,11 @@ export default {
 
 @tailwind preflight;
 
-.bread {
-  @apply .bg-grey-light .text-red .flex .text-4xl;
+.breadcrumbs {
+  @apply .text-grey-darker .pt-10 .pb-5;
+}
+.breadcrumbs .link:hover {
+  @apply .underline;
 }
 
 @tailwind utilities;

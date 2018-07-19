@@ -1,8 +1,7 @@
 <template>
   <div class="container" style="height: 500px;">
-    <add-to-cart :product="product" />
+    <add-to-cart :product="product" style="width: 30%;" />
     <breadcrumbs
-      class="pt40 pb20 hidden-xs"
       :routes="breadcrumbs.routes"
       :active-route="breadcrumbs.name"
     />
