@@ -30,34 +30,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-@tailwind preflight;
-
-.tocart {
-    @apply .min-w_250 .border-none .w-full .riple .text-white .bg-cl-mine-shaft .no-outline .block .cursor-pointer .font-normal .text_18 .px-10 .py-5;
-}
-.tocart:hover {
-    @apply .bg-grey-darkest;
-}
-
-@tailwind utilities;
-.min-w_250{
-  min-width: 250px;
-}
-.no-outline{
-outline: 0;
-}
-.bg-cl-mine-shaft{
-  background-color: #333;
-}
-.riple{
-      position: relative;
-    overflow: hidden;
-}
-.text_18{
-  font-size: 18px;
-}
-
-</style>
