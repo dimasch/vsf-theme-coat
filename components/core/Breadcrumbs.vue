@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumbs h5 cl-gray">
+  <div class="breadcrumbs h5 cl-gray bread">
     <span v-for="link in routes" :key="link.route_link">
       <router-link :to="localizedRoute(link.route_link)">
         {{ link.name | htmlDecode }}
@@ -18,3 +18,15 @@ export default {
   mixins: [Breadcrumbs]
 }
 </script>
+
+<style scoped>
+
+@tailwind preflight;
+
+.bread {
+  @apply .bg-grey-light .text-red .flex .text-4xl;
+}
+
+@tailwind utilities;
+
+</style>

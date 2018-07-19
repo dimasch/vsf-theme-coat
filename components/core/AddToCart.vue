@@ -1,5 +1,5 @@
 <template>
-  <button-full @click.native="addToCart(product)" :disabled="canBeAdded(product)" data-testid="addToCart">
+  <button-full @click.native="addToCart(product)" :disabled="canBeAdded(product)" data-testid="addToCart" class="btn btn-blue .btn-blue:hover">
     {{ $t('Add to cart') }}
   </button-full>
 </template>
@@ -30,3 +30,21 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+@tailwind preflight;
+
+.btn {
+  @apply .font-bold .py-2 .px-4 .rounded;
+}
+.btn-blue {
+  @apply .bg-blue .text-white;
+}
+.btn-blue:hover {
+  @apply .bg-blue-dark;
+}
+
+@tailwind utilities;
+
+</style>
