@@ -35,10 +35,10 @@ export default {
 
 @tailwind preflight;
 
-.addToCart {
+.tocart {
     @apply .min-w_250 .border-none .w-full .riple .text-white .bg-cl-mine-shaft .no-outline .block .cursor-pointer .font-normal .text_18 .px-10 .py-5;
 }
-.addToCart:hover {
+.tocart:hover {
     @apply .bg-grey-darkest;
 }
 
