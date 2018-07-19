@@ -4,20 +4,31 @@
     <button class="btn btn-blue">
       Button
     </button>
+    <breadcrumbs
+      class="pt40 pb20 hidden-xs"
+      :routes="breadcrumbs.routes"
+      :active-route="breadcrumbs.name"
+    />
   </div>
 </template>
 
 <script>
 import AddToCart from 'theme/components/core/AddToCart.vue'
+import Breadcrumbs from 'theme/components/core/Breadcrumbs.vue'
 
 export default {
   data () {
     return {
-      product: {}
+      product: {},
+      breadcrumbs: {
+        routes: [{name: 'Homepage', route_link: '/'}],
+        name: 'styleguide'
+      }
     }
   },
   components: {
-    AddToCart
+    AddToCart,
+    Breadcrumbs
   }
 }
 </script>
@@ -26,6 +37,9 @@ export default {
 
 @tailwind preflight;
 
+.breadcrumbs{
+  @apply .bg-grey-light .text-red .flex .text-4xl;
+}
 .btn {
   @apply .font-bold .py-2 .px-4 .rounded;
 }
