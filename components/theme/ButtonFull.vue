@@ -3,8 +3,9 @@
     :is="link ? 'router-link' : 'button'"
     :type="!link ? type : false"
     :to="localizedRoute(link)"
-    class="button-full"
+    class="no-outline button-full block brdr-none w-100 px10 py20 bg-cl-mine-shaft :bg-cl-th-secondary ripple weight-400 h4 cl-white sans-serif fs-medium"
     :class="{ 'no-underline pointer align-center border-box': link, 'disabled': disabled }"
+    data-testid="subscribeSubmit"
   >
     <slot>
       Button
@@ -37,32 +38,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
-@tailwind preflight;
-
-.button-full {
-    @apply .min-w_250 .border-none .w-full .riple .text-white .bg-cl-mine-shaft .no-outline .block .cursor-pointer .font-normal .text_18 .px-10 .py-5;
-}
-.button-full:hover {
-    @apply .bg-grey-darkest;
-}
-
-@tailwind utilities;
-.min-w_250{
-  min-width: 250px;
-}
-.no-outline{
-outline: 0;
-}
-.bg-cl-mine-shaft{
-  background-color: #333;
-}
-.riple{
-      position: relative;
-    overflow: hidden;
-}
-.text_18{
-  font-size: 18px;
-}
+<style lang="scss" scoped>
+  .button-full {
+    min-width: 250px;
+  }
+  .disabled {
+    background-color: gray
+  }
 </style>
