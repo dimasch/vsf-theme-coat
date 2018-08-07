@@ -9,7 +9,7 @@ import Compare from 'theme/pages/Compare.vue'
 import PageNotFound from 'theme/pages/PageNotFound.vue'
 import MyAccount from 'theme/pages/MyAccount.vue'
 import CustomCmsPage from 'theme/pages/CustomCmsPage.vue'
-import StyleGuide from 'theme/pages/StyleGuide.vue'
+import CmsData from 'src/extensions/cms/components/CmsData'
 
 import config from 'config'
 
@@ -38,6 +38,7 @@ let routes = [
   { name: 'compare', path: '/compare', component: Compare, props: {title: 'Compare Products'} },
   { name: 'page-not-found', path: '/page-not-found', component: PageNotFound },
   { name: 'custom-cms-page', path: '/custom-cms-page', component: CustomCmsPage },
+  { name: 'cms-page-sync', path: '/cms-page-sync', component: CmsData, props: {identifier: 'about-us', type: 'Page', sync: true} },
   { name: 'styleguide', path: '/styleguide', component: StyleGuide }
 ]
 if (!config.products.useShortCatalogUrls) {

@@ -1,7 +1,7 @@
 <template>
-  <div class="breadcrumbs">
+  <div class="breadcrumbs h5 cl-gray">
     <span v-for="link in routes" :key="link.route_link">
-      <router-link :to="localizedRoute(link.route_link)" class="link">
+      <router-link :to="localizedRoute(link.route_link)">
         {{ link.name | htmlDecode }}
       </router-link> /
     </span>
@@ -18,18 +18,3 @@ export default {
   mixins: [Breadcrumbs]
 }
 </script>
-
-<style scoped>
-
-@tailwind preflight;
-
-.breadcrumbs {
-  @apply .text-grey-darker .pt-10 .pb-5;
-}
-.breadcrumbs .link:hover {
-  @apply .underline;
-}
-
-@tailwind utilities;
-
-</style>
