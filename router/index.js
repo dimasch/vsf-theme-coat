@@ -10,6 +10,7 @@ import PageNotFound from 'theme/pages/PageNotFound.vue'
 import MyAccount from 'theme/pages/MyAccount.vue'
 import CustomCmsPage from 'theme/pages/CustomCmsPage.vue'
 import CmsData from 'src/extensions/cms/components/CmsData'
+import StyleGuide from 'theme/pages/StyleGuide.vue'
 
 import config from 'config'
 

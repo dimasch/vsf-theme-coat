@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd ../../../ && node core/scripts/server"
+    "dev": "cd ../../../ && node core/scripts/server",
+    "sg": "vue-styleguidist server",
+    "sg:build": "vue-styleguidist build"
   },
   "author": "pkarw <pkarwatka@divante.pl> and contributors",
   "license": "MIT",
@@ -21,5 +23,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "vue-styleguidist": "^1.7.13"
   }
 }
